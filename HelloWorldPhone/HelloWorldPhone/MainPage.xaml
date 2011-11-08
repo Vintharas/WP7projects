@@ -29,7 +29,13 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
         	<Rectangle Fill="#FFC9E9C0" RadiusY="17" RadiusX="17"/>
-        	<TextBlock x:Name="theStatus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="48"><Run Text="Statu"/><Run Text="s"/></TextBlock></Grid>
+        	<TextBlock x:Name="theStatus" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="48"><Run Text="Statu"/><Run Text="s"/></TextBlock>
+            <Ellipse x:Name="theEllipse" Fill="White" Width="200" Height="200">
+                <Ellipse.RenderTransform>
+                    <TranslateTransform x:Name="theMover" />
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
