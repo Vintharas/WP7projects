@@ -1,0 +1,9 @@
+﻿<UserControl 
+    x:Class="WindowsPhoneExamples.Views.UserControlTextBlock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock Text="This is a TextBlock"/>
+        <Rectangle Width="100" Height="100" Fill="Aqua" />
+    </Grid>
+</UserControl>
