@@ -27,7 +27,12 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ListBox Name="lbParcels"
+                     ItemsSource="{Binding Parcels}"
+                     SelectedItem="{Binding selectedParcel, Mode=TwoWay}"
+                     ItemTemplate="{StaticResource parcelListTemplate}" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

@@ -13,6 +13,32 @@
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="jobListTemplate">
+            <StackPanel Margin="0,0,0,17" Width="432">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/ParcelIcon.png" Width="48" />
+                    <TextBlock Text="{Binding Job.Id}"
+                               Style="{StaticResource PhoneTextTitle2Style}" />
+                    <TextBlock Text="{Binding Job.BookTime,
+                                      Converter={StaticResource formatConv},
+                                      ConverterParameter='ToUpper'}"
+                               Style="{StaticResource PhoneTextTitle2Style}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20,5">
+                    <TextBlock Text="{Binding Job.PickupArea,
+                                     Converter={StaticResource formatConv},
+                                     ConverterParameter='ToUpper'}"
+                               Style="{StaticResource PhoneTextTitle3Style}" />
+                    <TextBlock Text="-" />
+                    <TextBlock Text="{Binding Job.PickupFrom}"
+                               Style="{StaticResource PhoneTextTitle3Style}" />
+                    
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -27,7 +53,15 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ListBox x:Name="lbJobs"
+                     Margin="0,0,-12,0"
+                     ItemTemplate="{StaticResource jobListTemplate}"
+                     ItemsSource="{Binding Jobs}"
+                     SelectedItem="{Binding SelectedJob, Mode=TwoWay}"
+                     SelectionChanged="lbJobs_Selectionchanged">
+            </ListBox>
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

@@ -18,6 +18,8 @@ namespace ExpressParcels.Views
         public JobDetailsView()
         {
             InitializeComponent();
+            // Bind to selected job
+            DataContext = App.JobListVM.SelectedJob;
         }
     }
 }

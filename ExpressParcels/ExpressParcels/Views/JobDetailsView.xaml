@@ -13,6 +13,29 @@
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="jobDetailsTemplate">
+            <StackPanel>
+                <TextBlock Text="Time booked:" />
+                <TextBlock Text="{Binding BookTime}"
+                           Style="{StaticResource PhoneTextTitle2Style}" />
+                
+                <TextBlock Text="Pickup: " Margin="0,20,0,0" />
+                <TextBlock Text="{Binding PickupArea}" 
+                           Style="{StaticResource PhoneTextTitle2Style}"/>
+                <TextBlock Text="{Binding PickupFrom}"
+                           TextWrapping="Wrap"
+                           Style="{StaticResource PhoneTextTitle2Style}" />
+                
+                <TextBlock Text="jarajarajara" Margin="0,20,0,0" />
+                <TextBlock Text="Status : "
+                           Margin="0, 20, 0, 0" />
+                <TextBlock Text="{Binding JobStatus}"
+                           Style="{StaticResource PhoneTextTitle2Style}"
+                           VerticalAlignment="Center" />
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -27,7 +50,10 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ContentControl ContentTemplate="{StaticResource jobDetailsTemplate}"
+                            Content="{Binding}" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

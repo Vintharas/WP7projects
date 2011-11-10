@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExpressParcels.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -17,6 +18,8 @@ namespace ExpressParcels
 {
     public partial class App : Application
     {
+        public static JobListViewModel JobListVM { get; set; }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

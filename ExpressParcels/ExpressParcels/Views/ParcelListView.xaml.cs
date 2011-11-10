@@ -18,6 +18,7 @@ namespace ExpressParcels.Views
         public ParcelListView()
         {
             InitializeComponent();
+            DataContext = App.JobListVM.SelectedJob;
         }
     }
 }

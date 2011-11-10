@@ -76,7 +76,7 @@ namespace ExpressParcels.Model
         }
         private int driverId;
 
-        public string JobStatus
+        public byte JobStatus
         {
             get { return jobStatus; }
             set
@@ -88,7 +88,7 @@ namespace ExpressParcels.Model
                 }
             }
         }
-        private string jobStatus;
+        private byte jobStatus;
 
         public string PickupArea
         {
@@ -118,7 +118,7 @@ namespace ExpressParcels.Model
         }
         private string pickupFrom;
 
-        public DateTime PickupTime
+        public DateTime? PickupTime
         {
             get { return pickupTime; }
             set
@@ -130,7 +130,7 @@ namespace ExpressParcels.Model
                 }
             }
         }
-        private DateTime pickupTime;
+        private DateTime? pickupTime;
 
         public ObservableCollection<Parcel> Parcels { get; set; }
 
