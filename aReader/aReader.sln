@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aReader", "aReader\aReader.csproj", "{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleReaderService", "GoogleReaderService\GoogleReaderService.csproj", "{6C6987CC-DA68-4ACE-8BA0-0D28518D433B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{966372CB-386E-4206-9A8A-C0607E0226F6}"
+	ProjectSection(SolutionItems) = preProject
+		aReader.vsmdi = aReader.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleReaderService.IntegrationTests", "GoogleReaderService.IntegrationTests\GoogleReaderService.IntegrationTests.csproj", "{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = aReader.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7DB3EE-B438-4F2E-B476-C3002429AA0E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6C6987CC-DA68-4ACE-8BA0-0D28518D433B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6987CC-DA68-4ACE-8BA0-0D28518D433B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6987CC-DA68-4ACE-8BA0-0D28518D433B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6987CC-DA68-4ACE-8BA0-0D28518D433B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB89F277-24C8-48F9-B726-9D63D0ECC7AF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
