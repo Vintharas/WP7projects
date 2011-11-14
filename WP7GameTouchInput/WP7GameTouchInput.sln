@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7GameTouchInput", "WP7GameTouchInput\WP7GameTouchInput\WP7GameTouchInput.csproj", "{49531A0D-D686-4060-B138-1F7F804F5C64}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WP7GameTouchInputContent", "WP7GameTouchInput\WP7GameTouchInputContent\WP7GameTouchInputContent.contentproj", "{EE4B8231-D1A6-4C6F-90E4-2AA1F9ED3FCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{49531A0D-D686-4060-B138-1F7F804F5C64}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{EE4B8231-D1A6-4C6F-90E4-2AA1F9ED3FCE}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{EE4B8231-D1A6-4C6F-90E4-2AA1F9ED3FCE}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
