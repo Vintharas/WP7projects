@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7GameSIPSample", "WP7GameSIPSample\WP7GameSIPSample\WP7GameSIPSample.csproj", "{63B32763-A4A1-46E4-B63B-7A056B348060}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WP7GameSIPSampleContent", "WP7GameSIPSample\WP7GameSIPSampleContent\WP7GameSIPSampleContent.contentproj", "{77FC5E83-FCC7-4A63-A3F6-47B3CEB7CDFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{63B32763-A4A1-46E4-B63B-7A056B348060}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{77FC5E83-FCC7-4A63-A3F6-47B3CEB7CDFC}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{77FC5E83-FCC7-4A63-A3F6-47B3CEB7CDFC}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

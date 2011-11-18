@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHandlerDemo", "InputHandlerDemo\InputHandlerDemo\InputHandlerDemo.csproj", "{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "InputHandlerDemoContent", "InputHandlerDemo\InputHandlerDemoContent\InputHandlerDemoContent.contentproj", "{256298DC-B05D-4264-9ABB-86C858E0BCAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{0DFD80E9-C2EC-4E58-A816-F7D95D7E4ACC}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{256298DC-B05D-4264-9ABB-86C858E0BCAB}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{256298DC-B05D-4264-9ABB-86C858E0BCAB}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
