@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldenAxe", "GoldenAxe\GoldenAxe\GoldenAxe.csproj", "{F83063CD-B50E-4BEA-9807-929F688F6004}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "GoldenAxeContent", "GoldenAxe\GoldenAxeContent\GoldenAxeContent.contentproj", "{201CE61E-6F36-4AFC-B3DD-A26FF9CB81B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{F83063CD-B50E-4BEA-9807-929F688F6004}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{201CE61E-6F36-4AFC-B3DD-A26FF9CB81B5}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{201CE61E-6F36-4AFC-B3DD-A26FF9CB81B5}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
