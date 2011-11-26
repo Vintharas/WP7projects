@@ -1,4 +1,4 @@
-﻿namespace InputHandlerDemo.Inputs
+namespace GameInputs.Inputs
 {
     /// <summary>
     /// Enumeration that stores all possible directions for the custom TouchSlide gesture (Swipe)

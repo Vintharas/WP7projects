@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7GameStateBoolean", "WP7GameStateBoolean\WP7GameStateBoolean\WP7GameStateBoolean.csproj", "{7137468C-4997-46B1-88DF-AEB833CA52B7}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WP7GameStateBooleanContent", "WP7GameStateBoolean\WP7GameStateBooleanContent\WP7GameStateBooleanContent.contentproj", "{5DA60283-975D-4E0A-BDFB-FE1B9031EDE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{7137468C-4997-46B1-88DF-AEB833CA52B7}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{5DA60283-975D-4E0A-BDFB-FE1B9031EDE0}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{5DA60283-975D-4E0A-BDFB-FE1B9031EDE0}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

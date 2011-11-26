@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7GameStateObjectOriented", "WP7GameStateObjectOriented\WP7GameStateObjectOriented\WP7GameStateObjectOriented.csproj", "{A009305E-AB60-4FD8-BCF3-160DC0E79369}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WP7GameStateObjectOrientedContent", "WP7GameStateObjectOriented\WP7GameStateObjectOrientedContent\WP7GameStateObjectOrientedContent.contentproj", "{0F9F52E2-E8F9-470A-BF14-E83D32404DDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{A009305E-AB60-4FD8-BCF3-160DC0E79369}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{0F9F52E2-E8F9-470A-BF14-E83D32404DDC}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{0F9F52E2-E8F9-470A-BF14-E83D32404DDC}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
