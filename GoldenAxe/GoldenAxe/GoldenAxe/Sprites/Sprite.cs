@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GoldenAxe.Sprites
 {
-    internal abstract class Sprite
+    public abstract class Sprite
     {
         // Stuff needed to draw the sprite
         private const int defaultMillisecondsPerFrame = 16;
@@ -74,6 +74,7 @@ namespace GoldenAxe.Sprites
         // Get/set score
         public int scoreValue { get; protected set; }
 
+        // Gets the collision rect based on position, framesize and collision offset
         public Rectangle collisionRect
         {
             get
@@ -116,7 +117,7 @@ namespace GoldenAxe.Sprites
                              scale, SpriteEffects.None, 0);
         }
 
-        // Gets the collision rect based on position, framesize and collision offset
+
 
         // Detect if this sprite is off the screen and irrelevant
         public bool IsOutOfBounds(Rectangle clientRect)

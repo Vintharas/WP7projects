@@ -1,4 +1,5 @@
 using System;
+using GoldenAxe.Screens;
 using GoldenAxe.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,7 +16,7 @@ namespace GoldenAxe
         private SpriteBatch spriteBatch;
         public decimal NumberLivesRemaining = 5;
 
-        private SpriteManager spriteManager;
+        private ScreenManager screenManager;
 
         public Game1()
         {
@@ -27,9 +28,12 @@ namespace GoldenAxe
 
             // Extend battery life under lock.
             InactiveSleepTime = TimeSpan.FromSeconds(1);
-            
-            spriteManager = new SpriteManager(this);
-            Components.Add(spriteManager);
+
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 480;
+
+            screenManager = new ScreenManager(this);
+            Components.Add(screenManager);
         }
 
         /// <summary>
