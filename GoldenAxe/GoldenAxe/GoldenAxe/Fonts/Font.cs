@@ -5,32 +5,33 @@ namespace GoldenAxe.Fonts
 {
     public class Font : DrawableGameComponent
     {
-        private string assetName;
-        private Vector2 position;
+        
         private SpriteBatch spriteBatch;
-        private string text;
-        private Color color;
+        private FontDescription fontDescription;
 
         private SpriteFont spriteFont;
 
         public Font(Game game, 
                     SpriteBatch spriteBatch, 
-                    string assetName,
-                    string text,
-                    Color color,
-                    Vector2 position) : base(game)
+                    FontDescription fontDescription) : base(game)
         {
             this.spriteBatch = spriteBatch;
-            this.assetName = assetName;
-            this.text = text;
-            this.color = color;
-            this.position = position;
+            this.fontDescription = fontDescription;
+        }
+
+        protected override void LoadContent()
+        {
+            spriteFont = Game.Content.Load<SpriteFont>(fontDescription.AssetName);
+            base.LoadContent();
         }
 
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(spriteFont, text, position, color);
+            spriteBatch.DrawString(spriteFont, 
+                fontDescription.Text, 
+                fontDescription.Position, 
+                fontDescription.Color);
             spriteBatch.End();
             base.Draw(gameTime);
         }

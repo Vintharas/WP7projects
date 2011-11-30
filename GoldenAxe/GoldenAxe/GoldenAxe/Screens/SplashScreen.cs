@@ -1,4 +1,5 @@
 ﻿using System;
+using GoldenAxe.Common;
 using GoldenAxe.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -12,7 +13,7 @@ namespace GoldenAxe.Screens
 
         public SplashScreen(Game game, SpriteBatch spriteBatch, Action<ScreenManager.GameScreen> navigateToScreen) : base(game, spriteBatch, navigateToScreen)
         {
-            ScreenGameComponents.Add(new NonAnimatedSprite(game, "Images/Background/vintharaslogo", SpritePosition.Centered, spriteBatch));
+            ScreenGameComponents.Add(new NonAnimatedSprite(game, "Images/Background/vintharaslogo", DrawablePosition.Centered, spriteBatch));
         }
 
         public override void Initialize()

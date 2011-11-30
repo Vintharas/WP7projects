@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GoldenAxe.Common;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace GoldenAxe.Sprites
@@ -9,7 +10,7 @@ namespace GoldenAxe.Sprites
 
         private string assetName;
         private Vector2 position;
-        private SpritePosition fixedPosition;
+        private DrawablePosition fixedPosition;
         private Texture2D texture;
 
         private int WindowWidth { get { return Game.GraphicsDevice.Viewport.Width; } }
@@ -22,7 +23,7 @@ namespace GoldenAxe.Sprites
             this.spriteBatch = spriteBatch;
         }
 
-        public NonAnimatedSprite(Game game, string assetName, SpritePosition position, SpriteBatch spriteBatch) : base(game)
+        public NonAnimatedSprite(Game game, string assetName, DrawablePosition position, SpriteBatch spriteBatch) : base(game)
         {
             this.assetName = assetName;
             this.fixedPosition = position;
@@ -37,7 +38,7 @@ namespace GoldenAxe.Sprites
         protected override void LoadContent()
         {
             texture = Game.Content.Load<Texture2D>(assetName);
-            if (fixedPosition != SpritePosition.None)
+            if (fixedPosition != DrawablePosition.None)
                 position = GetFixedPosition();
             base.LoadContent();
         }
@@ -50,12 +51,12 @@ namespace GoldenAxe.Sprites
         {
             switch (fixedPosition)
             {
-                case SpritePosition.Centered:
+                case DrawablePosition.Centered:
                     return new Vector2(WindowWidth/2 - texture.Width/2,
                         WindowHeight/2 - texture.Height/2);
                 default:
                     return Vector2.Zero;
-                case SpritePosition.TopCentered:
+                case DrawablePosition.TopCentered:
                     return new Vector2(WindowWidth/2 - texture.Width/2, 0);
             }
         }
