@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wp7GameSoundEffectSample", "Wp7GameSoundEffectSample\Wp7GameSoundEffectSample\Wp7GameSoundEffectSample.csproj", "{C7E21F09-4AB7-4903-91D5-83625A4C529C}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Wp7GameSoundEffectSampleContent", "Wp7GameSoundEffectSample\Wp7GameSoundEffectSampleContent\Wp7GameSoundEffectSampleContent.contentproj", "{B0B007B6-BEA2-4A81-B55A-138C48C4733E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{C7E21F09-4AB7-4903-91D5-83625A4C529C}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{B0B007B6-BEA2-4A81-B55A-138C48C4733E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{B0B007B6-BEA2-4A81-B55A-138C48C4733E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -31,15 +31,14 @@ namespace GoldenAxe.Sprites
 
         public override void Initialize()
         {
-            texture = Game.Content.Load<Texture2D>(assetName);
-            if (fixedPosition != SpritePosition.None)
-                position = GetFixedPosition();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-
+            texture = Game.Content.Load<Texture2D>(assetName);
+            if (fixedPosition != SpritePosition.None)
+                position = GetFixedPosition();
             base.LoadContent();
         }
 
@@ -56,6 +55,8 @@ namespace GoldenAxe.Sprites
                         WindowHeight/2 - texture.Height/2);
                 default:
                     return Vector2.Zero;
+                case SpritePosition.TopCentered:
+                    return new Vector2(WindowWidth/2 - texture.Width/2, 0);
             }
         }
 

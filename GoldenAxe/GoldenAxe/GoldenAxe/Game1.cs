@@ -31,6 +31,7 @@ namespace GoldenAxe
 
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 480;
+            graphics.IsFullScreen = true;
 
             screenManager = new ScreenManager(this);
             Components.Add(screenManager);

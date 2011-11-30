@@ -11,14 +11,14 @@ namespace GoldenAxe.Screens
         protected Game game;
         protected Action<ScreenManager.GameScreen> navigateToScreen;
         protected SpriteBatch spriteBatch;
-        protected List<DrawableGameComponent> drawableComponents;
+        protected GameComponentCollection ScreenGameComponents;
 
         public Screen(Game game, SpriteBatch spriteBatch, Action<ScreenManager.GameScreen> navigateToScreen) : base(game)
         {
             this.game = game;
             this.spriteBatch = spriteBatch;
             this.navigateToScreen = navigateToScreen;
-            drawableComponents = new List<DrawableGameComponent>();
+            ScreenGameComponents = new GameComponentCollection();
         }
 
         /// <summary>
@@ -35,9 +35,14 @@ namespace GoldenAxe.Screens
         /// </summary>
         public override void Initialize()
         {
-            foreach(var component in drawableComponents)
+            foreach(var component in ScreenGameComponents)
                 component.Initialize();
             base.Initialize();
+        }
+
+        protected override void LoadContent()
+        {
+            base.LoadContent();
         }
 
         /// <summary>
@@ -46,8 +51,8 @@ namespace GoldenAxe.Screens
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            foreach(var component in drawableComponents)
-                component.Update(gameTime);
+            foreach(var component in ScreenGameComponents)
+                ((DrawableGameComponent)component).Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -57,8 +62,8 @@ namespace GoldenAxe.Screens
         /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
-            foreach(var component in drawableComponents)
-                component.Draw(gameTime);
+            foreach(var component in ScreenGameComponents)
+                ((DrawableGameComponent)component).Draw(gameTime);
             base.Draw(gameTime);
         }
     }

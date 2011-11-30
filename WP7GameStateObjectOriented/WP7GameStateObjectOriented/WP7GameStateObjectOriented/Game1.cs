@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using WP7GameStateObjectOriented.Screens;
 
 namespace WP7GameStateObjectOriented
 {
@@ -19,6 +20,12 @@ namespace WP7GameStateObjectOriented
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private SpriteFont spriteFont;
+        private Screen currentScreen;
+        private SplashScreen splashScreen;
+        private TitleScreen titleScreen;
+        private GameScreen gameScreen;
+        private NagScreen nagScreen;
 
         public Game1()
         {
@@ -55,6 +62,36 @@ namespace WP7GameStateObjectOriented
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            spriteFont = Content.Load<SpriteFont>("SpriteFont1");
+            splashScreen = new SplashScreen(new EventHandler(SplashScreenEvent), spriteFont, GraphicsDevice);
+            titleScreen = new TitleScreen(new EventHandler(TitleScreenEvent), spriteFont, GraphicsDevice );
+            gameScreen = new GameScreen(new EventHandler(GameScreenEvent), spriteFont, GraphicsDevice );
+            nagScreen = new NagScreen(new EventHandler(NagScreenEvent), spriteFont, GraphicsDevice);
+            currentScreen = splashScreen;
+        }
+
+        private void GameScreenEvent(object sender, EventArgs e)
+        {
+            currentScreen = nagScreen;
+            gameScreen = null;
+        }
+
+        private void NagScreenEvent(object sender, EventArgs e)
+        {
+            this.Exit();
+            gameScreen = null;
+        }
+
+        private void TitleScreenEvent(object sender, EventArgs e)
+        {
+            currentScreen = gameScreen;
+            titleScreen = null;
+        }
+
+        private void SplashScreenEvent(object sender, EventArgs e)
+        {
+            currentScreen = titleScreen;
+            splashScreen = null;
         }
 
         /// <summary>
@@ -73,12 +110,7 @@ namespace WP7GameStateObjectOriented
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            // TODO: Add your update logic here
-
+            currentScreen.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -89,9 +121,9 @@ namespace WP7GameStateObjectOriented
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
+            currentScreen.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

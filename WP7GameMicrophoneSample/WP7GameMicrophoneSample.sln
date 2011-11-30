@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP7GameMicrophoneSample", "WP7GameMicrophoneSample\WP7GameMicrophoneSample\WP7GameMicrophoneSample.csproj", "{9E30187A-45E3-4BB5-BE93-DA87C596F831}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WP7GameMicrophoneSampleContent", "WP7GameMicrophoneSample\WP7GameMicrophoneSampleContent\WP7GameMicrophoneSampleContent.contentproj", "{F13231FD-0882-4E03-9914-299981FB89A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{9E30187A-45E3-4BB5-BE93-DA87C596F831}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{F13231FD-0882-4E03-9914-299981FB89A2}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{F13231FD-0882-4E03-9914-299981FB89A2}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -27,14 +27,14 @@ namespace GoldenAxe.Screens
 
         public override void Initialize()
         {
+            spriteBatch = new SpriteBatch(game.GraphicsDevice);
+            activeScreen = new SplashScreen(game, spriteBatch, NavigateToScreen);
+            activeScreen.Initialize();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(game.GraphicsDevice);
-            activeScreen = new SplashScreen(game, spriteBatch, NavigateToScreen);
-            activeScreen.Initialize();
             base.LoadContent();
         }
 
@@ -58,7 +58,10 @@ namespace GoldenAxe.Screens
                     if (PersistentGameScreens.ContainsKey(GameScreen.Start))
                         activeScreen = PersistentGameScreens[GameScreen.Start];
                     else
+                    {
                         activeScreen = new StartScreen(game, spriteBatch, NavigateToScreen);
+                        activeScreen.Initialize();
+                    }
                     break;
             }
         }

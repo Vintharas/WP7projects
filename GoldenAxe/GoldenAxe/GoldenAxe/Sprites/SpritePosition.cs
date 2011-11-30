@@ -3,6 +3,7 @@
     public enum SpritePosition
     {
         None,
-        Centered
+        Centered,
+        TopCentered
     }
 }
