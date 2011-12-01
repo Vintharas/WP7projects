@@ -14,14 +14,16 @@ namespace GoldenAxe.Controls
         /// <param name="drawablePosition"></param>
         /// <param name="drawableArea"></param>
         /// <returns></returns>
-         public static Vector2 GetPositionFromDrawablePosition(DrawablePosition drawablePosition, Rectangle drawableArea)
+         public static Vector2 GetPositionFromDrawablePosition(DrawablePosition drawablePosition, Vector2 drawableArea)
          {
              switch (drawablePosition)
              {
                  case DrawablePosition.Centered:
-                     return new Vector2(GAME_WINDOW_WIDTH/2 - drawableArea.Width/2, GAME_WINDOW_HEIGHT/2 - drawableArea.Height/2);
+                     return new Vector2(GAME_WINDOW_WIDTH/2 - drawableArea.X/2, GAME_WINDOW_HEIGHT/2 - drawableArea.Y/2);
                  case DrawablePosition.TopCentered:
-                    return new Vector2(GAME_WINDOW_WIDTH/2 - drawableArea.Width/2, 0);
+                    return new Vector2(GAME_WINDOW_WIDTH/2 - drawableArea.X/2, 0);
+                 case DrawablePosition.BottomCentered:
+                    return new Vector2(GAME_WINDOW_WIDTH/2 - drawableArea.X/2, GAME_WINDOW_HEIGHT - drawableArea.Y);
                  case DrawablePosition.None:
                  default:
                      return Vector2.Zero;

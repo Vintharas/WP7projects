@@ -1,4 +1,5 @@
 using System;
+using GoldenAxe.Inputs;
 using GoldenAxe.Screens;
 using GoldenAxe.Sprites;
 using Microsoft.Xna.Framework;
@@ -17,6 +18,7 @@ namespace GoldenAxe
         public decimal NumberLivesRemaining = 5;
 
         private ScreenManager screenManager;
+        private InputManager inputManager;
 
         public Game1()
         {
@@ -33,6 +35,7 @@ namespace GoldenAxe
             graphics.PreferredBackBufferHeight = 480;
             graphics.IsFullScreen = true;
 
+            inputManager = new InputManager();
             screenManager = new ScreenManager(this);
             Components.Add(screenManager);
         }

@@ -4,6 +4,7 @@ namespace GoldenAxe.Common
     {
         None,
         Centered,
-        TopCentered
+        TopCentered,
+        BottomCentered
     }
 }

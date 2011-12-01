@@ -63,10 +63,12 @@ namespace GoldenAxe.Screens
                         activeScreen.Initialize();
                     }
                     break;
+                case GameScreen.InGame:
+                    activeScreen = new InGameScreen(game, spriteBatch, NavigateToScreen);
+                    activeScreen.Initialize();
+                    break;
             }
         }
-
-       
 
     }
 }
