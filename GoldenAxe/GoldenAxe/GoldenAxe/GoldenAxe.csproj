@@ -81,6 +81,7 @@
     <Compile Include="Screens\StartScreen.cs" />
     <Compile Include="Sprites\MultiSprite.cs" />
     <Compile Include="Sprites\NonAnimatedSprite.cs" />
+    <Compile Include="Sprites\SpriteDirection.cs" />
     <Compile Include="Sprites\SpriteSheet.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>

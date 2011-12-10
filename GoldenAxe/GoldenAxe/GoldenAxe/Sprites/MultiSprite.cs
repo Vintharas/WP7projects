@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace GoldenAxe.Sprites
@@ -8,9 +9,9 @@ namespace GoldenAxe.Sprites
     /// Class that represents a multisprite, a sprite that can have different states and draw different animations
     /// depending on the state
     /// </summary>
-    public abstract class MultiSprite
+    public class MultiSprite
     {
-        public Dictionary<string, SpriteSheet> States;
+        public Dictionary<string, SpriteSheet> States { get; private set; }
         public string CurrentState;
         public SpriteSheet CurrentSheet { get { return States[CurrentState]; } }
 
@@ -28,45 +29,50 @@ namespace GoldenAxe.Sprites
             get
             {
                 return new Rectangle(
-                    (int)(position.X + (collisionOffset)),
-                    (int)(position.Y + (collisionOffset)),
-                    (int)((FrameSize.X - (collisionOffset * 2))),
-                    (int)((FrameSize.Y - (collisionOffset * 2))));
+                    (int)(position.X),
+                    (int)(position.Y),
+                    (int)(FrameSize.X),
+                    (int)(FrameSize.Y));
             }
         }
-        private readonly int collisionOffset;
         // Get current position of the sprite
         public Vector2 GetPosition
         {
             get { return position; }
         }
         protected Vector2 position;
+        private SpriteDirection movementDirection;
 
         /// <summary>
         /// Initialize members. No offset, default milliseconds per frame
         /// </summary>
         /// <param name="position"></param>
-        public MultiSprite(Vector2 position) : this(position, 0, DEFAULT_MILLISECONDS_PER_FRAME){}
-
-        /// <summary>
-        /// Initialize members. Default milliseconds per frame
-        /// </summary>
-        public MultiSprite(Vector2 position, int collisionOffset) : this(position, collisionOffset, DEFAULT_MILLISECONDS_PER_FRAME){}
+        public MultiSprite(Vector2 position) : this(position, DEFAULT_MILLISECONDS_PER_FRAME){}
 
         /// <summary>
         /// Initialize members
         /// </summary>
         /// <param name="position"></param>
-        /// <param name="collisionOffset"></param>
         /// <param name="millisecondsPerFrame"></param>
-        public MultiSprite(Vector2 position, int collisionOffset, int millisecondsPerFrame)
+        public MultiSprite(Vector2 position, int millisecondsPerFrame)
         {
             this.position = position;
-            this.collisionOffset = collisionOffset;
             this.millisecondsPerFrame = millisecondsPerFrame;
+            States = new Dictionary<string, SpriteSheet>();
+            movementDirection = SpriteDirection.Right;
         }
 
-        public virtual void Update(GameTime gameTime, Rectangle clientBounds)
+        public void LoadContent(ContentManager content)
+        {
+            foreach (var spriteSheet in States.Values)
+                spriteSheet.LoadContent(content);
+        }
+
+        /// <summary>
+        /// Update sprite to show
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public virtual void Update(GameTime gameTime)
         {
             // Update frame if time to do so based on framerate
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
@@ -78,15 +84,27 @@ namespace GoldenAxe.Sprites
             }
         }
 
+        /// <summary>
+        /// Draw sprite
+        /// </summary>
+        /// <param name="gameTime"></param>
+        /// <param name="spriteBatch"></param>
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            SpriteEffects spriteEffect = SpriteEffects.None;
+            if ((CurrentSheet.SpriteDirection == SpriteDirection.Left && movementDirection == SpriteDirection.Right)
+                || (CurrentSheet.SpriteDirection == SpriteDirection.Right && movementDirection == SpriteDirection.Left))
+                spriteEffect = SpriteEffects.FlipHorizontally;
+     
+            spriteBatch.Begin();
             spriteBatch.Draw(TextureImage,
                              position,
                              new Rectangle(CurrentFrame.X*FrameSize.X,
                                            CurrentFrame.Y*FrameSize.Y,
                                            FrameSize.X, FrameSize.Y),
                              Color.White, 0, Vector2.Zero,
-                             1f, SpriteEffects.None, 0);
+                             1f, spriteEffect, 0);
+            spriteBatch.End();
         }
 
 
@@ -104,6 +122,15 @@ namespace GoldenAxe.Sprites
 
             return false;
         }
-         
+
+        public void Move(int x, int y)
+        {
+            position.X += x;
+            position.Y += y;
+            if (x > 0)
+                movementDirection = SpriteDirection.Right;
+            else if (x < 0)
+                movementDirection = SpriteDirection.Left;
+        }
     }
 }
